@@ -6,8 +6,8 @@ def lambda_handler(event, context):
     source_key = event['Records'][0]['s3']['object']['key']
     
     # Specify the destination bucket and key
-    destination_bucket = 'your_destination_bucket_name'
-    destination_key = 'your_destination_key_prefix/' + source_key
+    destination_bucket = 'sensor-data-streaming'
+    destination_key =  source_key
     
     # Create an S3 client
     s3_client = boto3.client('s3')
