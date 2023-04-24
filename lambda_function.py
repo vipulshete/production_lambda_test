@@ -6,7 +6,7 @@ def lambda_handler(event, context):
     source_key = event['Records'][0]['s3']['object']['key']
     
     # Specify the destination bucket and key
-    destination_bucket = 'sensor-data-streaming'
+    destination_bucket = 'output-lambda-function'
     destination_key =  source_key
     
     # Create an S3 client
